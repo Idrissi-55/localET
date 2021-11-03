@@ -1,0 +1,24 @@
+@use 'src/styles/vars';
+
+.field {
+
+  .fieldInput {
+    box-sizing: border-box;
+    padding: 0.7rem;
+    border: 1px solid vars.$mediumGrey;
+    border-radius: vars.$borderRadius;
+  }
+
+  .fieldInput::placeholder {
+    color: vars.$mediumGrey;
+    font-size: vars.$textSmaller;
+
+    @media screen and (max-width: 480px) {
+      font-size: vars.$textSmallerMobile;
+    }
+  }
+
+  .fieldInput:focus {
+    border: vars.$borderThickness solid vars.$highlightColor;
+  }
+}

@@ -1,0 +1,103 @@
+@use 'src/styles/vars';
+
+// LOGIN FORM
+.loginForm {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+
+  }
+
+  .field {
+    padding: 0 1rem 0 0;
+
+    @media screen and (max-width: 780px) {
+      padding: 0.3rem 0;
+    }
+  }
+
+  .fieldInput::placeholder {
+    color: vars.$mediumGrey;
+    font-size: vars.$textSmaller;
+
+    @media screen and (max-width: 480px) {
+      font-size: vars.$textSmallerMobile;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .submit__button {
+      margin: 0.3rem auto;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    .field {
+      padding: 0;
+    }
+
+    .fieldInput {
+      margin: auto;
+      width: 80%;
+      margin: 1rem 0;
+      font-size: vars.$textMobile;
+    }
+
+    .submit__button {
+      margin: 1rem auto;
+      width: 80%;
+      font-size: vars.$textMobile;
+
+
+
+    }
+  }
+
+}
+
+// ERROR OF LOGIN SUBMIT
+.fieldError {
+  text-align: left;
+  font-size: vars.$extraSmallText;
+  font-style: italic;
+  color: vars.$mainColor;
+  padding: 0.3rem 1rem 1rem 0;
+
+  @media screen and (max-width: 480px) {
+    font-size: vars.$textSmallerMobile;
+    padding: 0.3rem 1rem 1rem 1rem;
+    width: 300px;
+    margin: auto;
+  }
+}
+
+// OPTION TO SWITCH TO SUBSCRIBE FORM :
+.formSwitch {
+  color: vars.$black;
+  text-align: right;
+  padding-top: 1rem;
+  font-size: vars.$textSmaller;
+
+  @media screen and (max-width: 480px) {
+    width: 80%;
+    margin: auto;
+    font-size: vars.$textSmallerMobile;
+    line-height: 1.6;
+    text-align: center;
+    padding-top: 2rem;
+    padding: 1rem;
+
+    .navLink {
+      margin-left: 0.5rem;
+    }
+  }
+}

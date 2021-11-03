@@ -1,0 +1,28 @@
+@use 'src/styles/vars';
+
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.5rem;
+  justify-content: center;
+
+  .navLink {
+    color: vars.$highlightColor;
+    padding-right: 0.5rem;
+    font-size: vars.$textSmaller;
+    text-align: right;
+
+    &:hover {
+      text-decoration: underline solid vars.$mainColor vars.$borderThickness;
+    }
+  }
+
+  .copyright {
+    color: vars.$black;
+    font-weight: lighter;
+    text-align: left;
+    font-size: vars.$textSmaller;
+    padding-left: 0.5rem;
+  }
+}
